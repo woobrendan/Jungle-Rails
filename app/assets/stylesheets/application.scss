@@ -5,6 +5,7 @@
 
 // App
 @import "products";
+@import "orders.css";
 
 // Global
 body {
@@ -14,4 +15,8 @@ body {
 // Bootstrap adjustments
 form.button_to {
   display: inline;
+}
+
+table.order_quantity {
+  text-align: center;
 }
