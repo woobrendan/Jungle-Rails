@@ -30,9 +30,11 @@
       <ul class="nav navbar-nav navbar-right">
 
       <% if current_user %>
-        <li>Signed in as <%= current_user.name %> | <%= link_to "Logout", session_path %>
+        <li>Signed in as <%= current_user.first_name %></li> 
+        <li><%= link_to 'Logout', logout_path%></li>
       <% else %>
-        <%= link_to 'Login', new_session_path %> | <%= link_to 'Signup', new_user_path %></li>
+        <li><%= link_to 'Login', new_session_path %></li> 
+        <li><%= link_to 'Signup', new_user_path %></li>
       <% end %>
 
        <li class="dropdown">
