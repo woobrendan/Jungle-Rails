@@ -16,7 +16,7 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     end
   end
 
-  scenario "They see one product detail page" do
+  scenario "They can add products to cart" do
     #ACT
     visit root_path
     expect(page).to have_link 'My Cart (0)', count: 1
