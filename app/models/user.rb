@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 3 }, presence: true
   validates :email, uniqueness: { case_sensitive: false }, presence: true
 
-  def authenticate_with_credentials(email, password)
+  def self.authenticate_with_credentials(email, password)
     alteredEmail = email.strip.downcase
     user = User.find_by_email(alteredEmail)
     if user && user.authenticate(password)  

@@ -20,3 +20,5 @@ class SessionsController < ApplicationController
     redirect_to new_session_path
   end
 end
+
+#
