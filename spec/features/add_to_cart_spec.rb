@@ -24,7 +24,7 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
 
     #DEBUG / VERIFY
     expect(page).to have_link 'My Cart (1)', count: 1
-    save_and_open_screenshot
+    # save_and_open_screenshot
   end
 end
 
