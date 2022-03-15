@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "UserLogins", type: :feature, js: true do
   before :each do
-    @user = User.create!(first_name: "Matt", last_name: "Campbell", email: "Matt@porsche.com", password: "test", password_confirmation: "test")
+    @user = User.create!(first_name: "Matt", last_name: "Campbell", email: "matt@porsche.com", password: "test", password_confirmation: "test")
   end
 
 
@@ -15,9 +15,7 @@ RSpec.feature "UserLogins", type: :feature, js: true do
     fill_in "email", with: "Matt@porsche.com"
     fill_in "password", with: "test"
     click_button "Submit"
-
-    puts page.html
-    save_and_open_screenshot
+  
     expect(page).to have_link 'Logout'
 
   end
