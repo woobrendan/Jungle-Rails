@@ -13,9 +13,12 @@
   <main class="container">
 
     <% if active_sale? %>
-      <p class="alert alert-info">
+      <div class="alert alert-warning alert-dismissible show" role="alert">
         There's an active <%= current_sale.name %> sale going on!  Everything is <strong><%= current_sale.first[:percent_off] %> off!</strong>
-      </p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
     <% end %>
     <%= yield %>
   </main>
